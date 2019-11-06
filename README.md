@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NgApod
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# ng_astro_daily_pic
+An angular based application that retrieves NASA's astronomy daily picture 
+>>>>>>> ed181137863b432adc773c3e0ddf9948566201b3
