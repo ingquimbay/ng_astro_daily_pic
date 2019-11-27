@@ -108,3 +108,5 @@ typings/
 # next.js build output
 .next
 >>>>>>> ed181137863b432adc773c3e0ddf9948566201b3
+
+/config
