@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-apod';
+  title = 'NASA\'s Astronomy Picture';
+
+  private temp: string;
+
+  setTemp(val): void {
+    this.temp = val;
+  }
+  private process(): boolean {
+    let x: boolean = false;
+    if (this.temp == 'sunshine') {
+      x = true;
+    }
+    return x;
+  }
 }
