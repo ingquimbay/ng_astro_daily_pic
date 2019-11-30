@@ -11,6 +11,7 @@ import { Apod } from "../models/apod";
 export class ApodComponent implements OnInit {
 
   apod: Apod;
+  date: string;
 
   constructor(private apodService: ApodService,
     private router: ActivatedRoute) { }
@@ -21,7 +22,20 @@ export class ApodComponent implements OnInit {
   getApod(date: string): void {
     // let date = new Date().toISOString().slice(0, 10);
 
-    this.apodService.getApod(date).subscribe((response: any) => { this.apod = response; console.log(response) });
+    if (!date) {
+      date = new Date().toISOString().slice(0, 10);
+    }
+
+    this.apodService.getApod(date).subscribe((response: any) => {
+      this.apod = response;
+      this.date = this.randomDate(new Date(1999, 1, 1), new Date());
+      console.log(response);
+    });
+  }
+
+  randomDate(start, end): string {
+    let date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    return new Date(date).toISOString().slice(0, 10);
   }
 
 }
