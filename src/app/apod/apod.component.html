@@ -7,7 +7,11 @@
       Anything inside of the double quotes after the equals sign
       be treated as executable code.
     -->
-  <img [src]="apod.url" [alt]="apod.title">
+  <!-- Only show the image element if the media_type is set to image -->
+  <img *ngIf="apod.media_type==='image'" [src]="apod.url" [alt]="apod.title">
+
+  <!-- Display and embed the YouTube video if the media_type is set to video -->
+  <iframe *ngIf="apod.media_type==='video'" [src]="apod.url | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
 
   <div>
     <!-- 
