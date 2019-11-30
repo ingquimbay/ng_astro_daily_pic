@@ -24,4 +24,6 @@
 
   <p>{{ apod.explanation }}</p>
 
+  <button *ngIf="date" [routerLink]="['/apod', this.date]">Random</button>
+
 </main>
